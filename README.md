@@ -106,3 +106,4 @@ OR
    ```
 
 The API will be accessible at `http://localhost:3000/api-docs` within the Docker container.
+![image](https://github.com/user-attachments/assets/1c20e58c-cd82-4cf9-992c-a4c382a70c0f)
