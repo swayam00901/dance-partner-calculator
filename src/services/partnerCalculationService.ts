@@ -103,9 +103,9 @@ export class PartnerCalculationService {
         const calculateAverageMatches = (matches: Record<string, { leader: string | number, follower: string }[]>) => {
             let totalLeaders = new Set<string | number>();
             let totalFollowers = new Set<string>();
-            console.log('Matches:', matches);
+            //console.log('Matches:', matches);
             Object.keys(matches).forEach(style => {
-            console.log(`Matches for ${style}:`, matches[style].length);
+           // console.log(`Matches for ${style}:`, matches[style].length);
             matches[style].forEach(({ leader, follower }) => {
                 totalLeaders.add(leader);
                 totalFollowers.add(follower);
@@ -117,8 +117,6 @@ export class PartnerCalculationService {
             const numMatch = Object.keys(matches).reduce((sum, style) => sum + matches[style].length, 0);
             const avgMatches = numMatch / this.danceStyles.length;
             return { avgLeaderMatches, avgFollowerMatches, numMatch, avgMatches };
-
-            return { avgLeaderMatches, avgFollowerMatches, numMatch };
         };
 
         const participants = initializeParticipants(total_leaders, total_followers);
@@ -126,7 +124,7 @@ export class PartnerCalculationService {
         const { avgLeaderMatches, avgFollowerMatches, numMatch,avgMatches } = calculateAverageMatches(matches);
 
         const totalAvgMatches = Math.ceil(avgLeaderMatches + avgFollowerMatches);
-        console.log('Matches:', matches);
+       // console.log('Matches:', matches);
         // Track dance styles in the database
         for (const style of this.danceStyles) {
             await this.trackDanceStyles(matches[style].map(match => style));
