@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    working_dir: /usr/src/app
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+      - ./sqlite:/usr/src/app/sqlite
+    ports:
+      - "3000:3000"
+    command: npm start
