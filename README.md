@@ -6,7 +6,7 @@ This microservice calculates the average number of dance partners each participa
 
 1. **Clone the repository:**
    ```
-   git clone https://github.com/swayam00901/-eval_ballroom_advanced.git
+   git clone https://github.com/swayam00901/dance-partner-calculator
    cd dance-partner-calculator
    ```
 
