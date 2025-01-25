@@ -1,5 +1,3 @@
-# FILE: /dance-partner-calculator/dance-partner-calculator/README.md
-
 # Dance Partner Calculator
 
 This microservice calculates the average number of dance partners each participant will dance with based on specific inputs. It is built using Node.js and TypeScript, and it exposes a RESTful API for interaction.
@@ -28,7 +26,7 @@ This microservice calculates the average number of dance partners each participa
    ```
 
 5. **Access the API:**
-   The API will be available at `http://localhost:3000/calculate-partners`.
+   The API will be available at `http://localhost:3000/api-docs`.
 
 ## Design Rationale
 
@@ -89,17 +87,22 @@ npm test
 
 To build and run the Docker container, use the following commands:
 
-1. **Build the Docker image:**
+1. **Build the Docker image:**``
    ```
    docker build -t dance-partner-calculator .
-   ```
+   ``
 
 2. **Run the Docker container:**
+
    ```
    docker run -p 3000:3000 dance-partner-calculator
    ```
-OR . **Build and run the Docker container:**
-   ```sh
+OR
+
+**Build and run the Docker container:**
+
+   ```
    docker-compose up --build
+   ```
 
 The API will be accessible at `http://localhost:3000/api-docs` within the Docker container.
